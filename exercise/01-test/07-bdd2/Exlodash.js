@@ -27,14 +27,24 @@ function drop() {
     return list
 }
 
-function flattenDeep() {
-    let list = arguments[0]
-    for(let i=0; i<list.length; i++) {
-        if(Array.isArray(list[i]))
-            list.push(list[i].pop())
+function flatten(arr) { 
+    let y = []
+    for(let i= 0;i<arr.length; i++) {
+        if(Array.isArray(arr[i])) {
+            for(let j=0; j<arr[i].length; j++) 
+                y.push(arr[i][j])
+        }
+        else y.push(arr[i])
     }
-    console.log(list)
-    return list
+    return y
+}
+
+function flattenDeep(array) {
+    for(let i=0; i<array.length; i++) {
+        if(Array.isArray(array[i])) 
+            array = flatten(array)
+    }
+    return array
 }
 
 const lodashtest = {
