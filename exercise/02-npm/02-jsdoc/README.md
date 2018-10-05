@@ -1,15 +1,52 @@
-# 隨堂練習
+# Install
 
-請延續 《上一個練習》，為你的專案加上 api 文件
+```
+npm i wyclodash
+```
 
-1. 為你的專案加上 jsdoc 格式的說明
-  * 參考 : http://usejsdoc.org/
-  * http://www.css88.com/doc/jsdoc/index.html
-  * https://github.com/se107a/ccclodash/blob/master/lib/chunk.js
-2. 然後用 jsdoc 自動產生該專案的說明
-  * https://github.com/se107a/ccclodash/blob/master/package.json
-  * jsdoc index.js lib -r -d docs -t node_modules/docdash
-  * 記得安裝 jsdoc 與 docdash (另外你使用到的套件 mocha, chai, ... ) 也要裝好
-3. 最後再次用 npm publish 出版你的套件。
+# Example
 
-完整參考: https://github.com/se107a/ccclodash
+file : ex1.js
+
+```javascript
+const _= require('wyclodash')
+
+console.log('_.difference([2, 1], [2, 3]) =', _.difference([2, 1], [2, 3]))
+```
+
+Run
+
+```
+> node ex1.js
+_.difference([2, 1], [2, 3]) = [ 1 ]
+```
+
+file : ex2.js
+
+```javascript
+const _ = require('wyclodash')
+
+console.log('_.drop([1, 2, 3]) = ', _.drop([1, 2, 3]))
+```
+
+Run
+
+```
+> node ex2.js
+_.drop([1, 2, 3]) =  [ 2, 3 ]
+```
+
+file : ex3.js
+
+```javascript
+const _ = require('wyclodash')
+
+console.log('_.flattenDeep([1, [2, [3, [4]], 5]]) = ', _.flattenDeep([1, [2, [3, [4]], 5]]))
+```
+
+Run
+
+```
+> node ex3.js
+_.flattenDeep([1, [2, [3, [4]], 5]]) =  [ 1, 2, 3, 4, 5 ]
+```

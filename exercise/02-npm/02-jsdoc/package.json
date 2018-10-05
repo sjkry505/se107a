@@ -1,0 +1,28 @@
+{
+  "name": "wyclodash",
+  "version": "0.0.4",
+  "description": "lodash function practice",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "all": "npm run test&&npm run cover&&npm run docs",
+    "test": "mocha",
+    "cover": "nyc mocha",
+    "docs": "jsdoc index.js lib -r -d docs -t node_modules/docdash"
+  },
+  "keywords": [
+    "wyclodash",
+    "lodash"
+  ],
+  "author": "wyc",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "docdash": "^1.0.0",
+    "jsdoc": "^3.5.5",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1"
+  }
+}
