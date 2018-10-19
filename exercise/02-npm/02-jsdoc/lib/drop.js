@@ -1,6 +1,6 @@
 /**
  *Creates a slice of array with n elements dropped from the beginning.
- * 
+ *
  * @memberof _
  * @since 0.1.0
  * @category Array
@@ -16,14 +16,14 @@
  * // => [3]
  */
 
-function drop() {
-    let list = arguments[0]
-    let x = arguments[1]
+function drop () {
+  let list = arguments[0]
+  let x = arguments[1]
 
-    if (x === undefined)
-        list = list.slice(1)
-    else list = list.slice(x)
-    return list
+  if (x === undefined) {
+    list = list.slice(1)
+  } else list = list.slice(x)
+  return list
 }
-  
-  module.exports = drop
+
+module.exports = drop

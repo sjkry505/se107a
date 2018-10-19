@@ -1,6 +1,6 @@
 /**
  *Recursively flattens array.
- * 
+ *
  * @memberof _
  * @since 0.1.0
  * @category Array
@@ -13,24 +13,25 @@
  *
  */
 
-function flatten(arr) { 
-    let y = []
-    for(let i= 0;i<arr.length; i++) {
-        if(Array.isArray(arr[i])) {
-            for(let j=0; j<arr[i].length; j++) 
-                y.push(arr[i][j])
-        }
-        else y.push(arr[i])
-    }
-    return y
+function flatten (arr) {
+  let y = []
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      for (let j = 0; j < arr[i].length; j++) {
+        y.push(arr[i][j])
+      }
+    } else y.push(arr[i])
+  }
+  return y
 }
 
-function flattenDeep(array) {
-    for(let i=0; i<array.length; i++) {
-        if(Array.isArray(array[i])) 
-            array = flatten(array)
+function flattenDeep (array) {
+  for (let i = 0; i < array.length; i++) {
+    if (Array.isArray(array[i])) {
+      array = flatten(array)
     }
-    return array
+  }
+  return array
 }
-  
-  module.exports = flattenDeep
+
+module.exports = flattenDeep
