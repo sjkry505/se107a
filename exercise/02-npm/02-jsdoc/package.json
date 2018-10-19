@@ -1,6 +1,6 @@
 {
   "name": "wyclodash",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "lodash function practice",
   "main": "index.js",
   "directories": {
